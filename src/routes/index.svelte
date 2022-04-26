@@ -2,7 +2,7 @@
 
   <div class="bg-gray-50 rounded-full px-12 py-4 text-center shadow-md">
     <h1 class="text-3xl font-bold">Svelte + TailwindCSS</h1>
-    <h2>just another template | <a href="">github</a></h2>
+    <h2>just another template | <a href="https://github.com/joseph-bravo/tailwind-svelte">github</a></h2>
   </div>
 
 </div>
