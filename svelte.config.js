@@ -7,15 +7,10 @@ import adapterStatic from '@sveltejs/adapter-static';
 const buildingForGitHubPages = true;
 //!=================================
 
-const dev = "production" === "development";
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
-    paths: {
-      base: dev ? '' : '/svelte-tailwind'
-    }
+		adapter: adapter()
 	},
 
 	preprocess: [
@@ -29,8 +24,11 @@ const config = {
 if (buildingForGitHubPages) {
   config.kit.adapter = adapterStatic({
     pages: 'docs',
-    assets: 'docs'
+    assets: 'docs',
   });
+  config.kit.paths = {
+    base: '/svelte-tailwind'
+  };
   config.kit.prerender = {
     default: true
   }
