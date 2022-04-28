@@ -5,6 +5,8 @@ import adapterStatic from '@sveltejs/adapter-static';
 //? Change when building site.
 //!=================================
 const buildingForGitHubPages = true;
+
+const repositoryName = 'svelte-tailwind';
 //!=================================
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -27,7 +29,7 @@ if (buildingForGitHubPages) {
     assets: 'docs',
   });
   config.kit.paths = {
-    base: '/svelte-tailwind'
+    base: '/' + repositoryName;
   };
   config.kit.prerender = {
     default: true
