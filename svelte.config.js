@@ -29,7 +29,7 @@ if (buildingForGitHubPages) {
     assets: 'docs',
   });
   config.kit.paths = {
-    base: '/' + repositoryName;
+    base: '/' + repositoryName
   };
   config.kit.prerender = {
     default: true
